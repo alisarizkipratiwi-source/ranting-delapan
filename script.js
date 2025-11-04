@@ -19,11 +19,18 @@ if (localStorage.getItem('menu')) {
     menu = JSON.parse(localStorage.getItem('menu'));
 }
 
+// Debug: Log menu di console
+console.log('Menu loaded:', menu);
 
 // Fungsi render menu
 function renderMenu() {
+    console.log('Rendering menu...');  // Debug
     const foodMenu = document.getElementById('foodMenu');
     const drinkMenu = document.getElementById('drinkMenu');
+    if (!foodMenu || !drinkMenu) {
+        console.error('Menu elements not found!');  // Debug
+        return;
+    }
     foodMenu.innerHTML = '';
     drinkMenu.innerHTML = '';
 
@@ -50,6 +57,7 @@ function renderMenu() {
         `;
         drinkMenu.appendChild(div);
     });
+    console.log('Menu rendered successfully.');  // Debug
 }
 
 // Fungsi tambah ke keranjang
