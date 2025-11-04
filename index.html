@@ -19,6 +19,13 @@
         <div id="drinkMenu"></div>
     </section>
 
+    <section id="cart">
+        <h2>Keranjang Belanja</h2>
+        <div id="cartItems"></div>
+        <p>Total: Rp<span id="cartTotal">0</span></p>
+        <button id="checkoutBtn" disabled>Checkout</button>
+    </section>
+
     <section id="adminPanel" style="display: none;">
         <h2>Update Stok</h2>
         <form id="stockForm">
@@ -30,13 +37,23 @@
         </form>
     </section>
 
-    <section id="orderForm" style="display: none;">
-        <h2>Pesan Item</h2>
-        <p id="orderItem"></p>
-        <label for="quantity">Jumlah:</label>
-        <input type="number" id="quantity" min="1" max="10">
-        <button id="confirmOrder">Konfirmasi Pesanan</button>
-    </section>
+    <div id="checkoutModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Checkout</h2>
+            <label for="customerName">Nama Anda:</label>
+            <input type="text" id="customerName" required>
+            <button id="confirmCheckout">Konfirmasi Pesanan</button>
+        </div>
+    </div>
+
+    <div id="receiptModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Receipt Pesanan</h2>
+            <div id="receiptContent"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
