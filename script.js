@@ -19,6 +19,7 @@ if (localStorage.getItem('menu')) {
     menu = JSON.parse(localStorage.getItem('menu'));
 }
 
+
 // Fungsi render menu
 function renderMenu() {
     const foodMenu = document.getElementById('foodMenu');
