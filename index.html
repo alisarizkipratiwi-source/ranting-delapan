@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Makanan & Minuman</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu Ranting delapan</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Menu Ranting delapan</h1>
-        <button id="adminBtn">Mode Admin (Update Stok)</button>
-    </header>
+  <header>
+    <h1>Menu Ranting delapan</h1>
+    <button id="adminBtn">Mode Admin (Update Stok)</button>
+  </header>
 
-    <section id="menu">
-        <h2>Makanan</h2>
-        <div id="foodMenu"></div>
-        <h2>Minuman</h2>
-        <div id="drinkMenu"></div>
-    </section>
-
-    <section id="cart">
-        <h2>Keranjang Belanja</h2>
-        <div id="cartItems"></div>
-        <p>Total: Rp<span id="cartTotal">0</span></p>
-        <button id="checkoutBtn" disabled>Checkout</button>
-    </section>
-
-    <section id="adminPanel" style="display: none;">
-        <h2>Update Stok</h2>
-        <form id="stockForm">
-            <label for="itemSelect">Pilih Item:</label>
-            <select id="itemSelect"></select>
-            <label for="newStock">Stok Baru:</label>
-            <input type="number" id="newStock" min="0">
-            <button type="submit">Update Stok</button>
-        </form>
-    </section>
-
-    <div id="checkoutModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Checkout</h2>
-            <label for="customerName">Nama Anda:</label>
-            <input type="text" id="customerName" required>
-            <button id="confirmCheckout">Konfirmasi Pesanan</button>
-        </div>
+  <section id="menu">
+    <div class="column">
+      <h2>Makanan</h2>
+      <div id="foodMenu"></div>
     </div>
-
-    <div id="receiptModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Receipt Pesanan</h2>
-            <div id="receiptContent"></div>
-        </div>
+    <div class="column">
+      <h2>Minuman</h2>
+      <div id="drinkMenu"></div>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="cart">
+    <h2>Keranjang Belanja</h2>
+    <div id="cartItems"></div>
+    <p>Total: Rp<span id="cartTotal">0</span></p>
+    <button id="checkoutBtn" disabled>Checkout</button>
+  </section>
+
+  <section id="adminPanel" style="display: none;">
+    <h2>Update Stok</h2>
+    <form id="stockForm">
+      <label for="itemSelect">Pilih Item:</label>
+      <select id="itemSelect"></select>
+      <label for="newStock">Stok Baru:</label>
+      <input type="number" id="newStock" min="0" />
+      <button type="submit">Update Stok</button>
+    </form>
+  </section>
+
+  <div id="checkoutModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Checkout</h2>
+      <label for="customerName">Nama Anda:</label>
+      <input type="text" id="customerName" required />
+      <button id="confirmCheckout">Konfirmasi Pesanan</button>
+    </div>
+  </div>
+
+  <div id="receiptModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Receipt Pesanan</h2>
+      <div id="receiptContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
