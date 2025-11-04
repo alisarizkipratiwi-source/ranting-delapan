@@ -1,14 +1,13 @@
 // Data menu awal (bisa disimpan di localStorage untuk persistensi)
 let menu = {
     food: [
-        { name: "Nasi Goreng", price: 15000, stock: 10 },
-        { name: "Ayam Bakar", price: 20000, stock: 5 },
-        { name: "Sate Ayam", price: 25000, stock: 0 } // Stok habis
-    ],
+        { name: "Ketan Durian", price: 5000, stock: 10 },
+    ]
     drink: [
-        { name: "Es Teh", price: 5000, stock: 20 },
-        { name: "Jus Jeruk", price: 10000, stock: 0 }, // Stok habis
-        { name: "Kopi Hitam", price: 8000, stock: 15 }
+        { name: "Sinom", price: 6000, stock: 30 },
+        { name: "Beras kencur", price: 8000, stock: 20 }, 
+        { name: "Teh Botol", price: 4000, stock: 10 }
+        { name: "Aqua", price: 5000, stock: 10 }
     ]
 };
 
